@@ -50,9 +50,9 @@
           <q-checkbox 
             v-model="userForm.conditions"
             label="Acepto las condiciones y términos de uso" 
-            :style="userForm.errorInConditions 
-                    && !userForm.conditions
-                    && 'color: red'"
+            :style="(userForm.errorInConditions  && !userForm.conditions)
+                ? 'color: red'
+                : ''"
           />
 
           <div class="row justify-end">
